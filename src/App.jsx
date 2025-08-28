@@ -1,5 +1,6 @@
 import './App.css'
 import Header from './components/Header'
+import Home from './components/Home'
 import Slider from './components/Slider'
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <>
       <Header />
       <Slider />
+      <Home />
     </>
   )
 }
