@@ -1,0 +1,85 @@
+.card{
+    color: var(--text-color-1);
+    width: 100%;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+    position: relative;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.card:hover .card__img{
+    opacity: 0.7;
+}
+
+.card__figure{
+    position: relative;
+    height: 100%;
+}
+
+.card__rate{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--bg-color-1);
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid var(--first-color);
+    font-weight: bold;
+    font-size: 0.8rem;
+    z-index: 1;
+}
+
+.card__rate::before{
+    content: "★";
+    color: var(--text-color-3);
+    margin-right: 5px;
+}
+
+.card__img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.3s;
+}
+
+.card__description{
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    z-index: 99;
+}
+
+.card__list{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.card__item{
+    background-color: var(--first-color);
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+}
+
+.card i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    opacity: 0;
+    color: var(--first-color);
+    transition: opacity 0.3s;
+}
+
+.card:hover i{
+    opacity: 1;
+}
