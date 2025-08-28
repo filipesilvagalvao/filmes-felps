@@ -1,6 +1,23 @@
 import { useRef } from "react";
 import styles from "./Header.module.css";
 import logo from "/src/assets/logo.png"
+const {
+    header,
+    header__container,
+    header__linkLogo,
+    header__logo,
+    header__nav,
+    header__list,
+    header__item,
+    header__itemLink,
+    header__form,
+    header__inputSearch,
+    header__buttonSearch,
+    header__labelHamburguer,
+    header__buttonHamburguerSpan,
+    menuToggle,
+    buttonSearchModal
+} = styles;
 
 function Header() {
     const searchInput = useRef(null);
@@ -9,24 +26,6 @@ function Header() {
         searchInput.current.classList.toggle(styles.header__formOpen);
         searchInput.current.children[0].focus();
     }
-
-    const {
-        header,
-        header__container,
-        header__linkLogo,
-        header__logo,
-        header__nav,
-        header__list,
-        header__item,
-        header__itemLink,
-        header__form,
-        header__inputSearch,
-        header__buttonSearch,
-        header__labelHamburguer,
-        header__buttonHamburguerSpan,
-        menuToggle,
-        buttonSearchModal
-    } = styles;
     return (
         <header className={header}>
             <div className={header__container}>

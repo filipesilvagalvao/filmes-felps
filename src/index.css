@@ -7,9 +7,40 @@
   font-family: "Poppins", sans-serif;
 }
 
-:root{
-    --first-color: #79c142;
-    --bg-color-1:#333;
-    --text-color-1: #fdfdfd;
-    --text-color-2:#ccc;
+body{
+  background-color: var(--bg-color-2);
 }
+
+:root {
+  --first-color: #79c142;
+  --bg-color-1: #333;
+  --bg-color-2:#020916;
+  --text-color-1: #fdfdfd;
+  --text-color-2: #ccc;
+
+  --age-livre: #1b873b; /* verde */
+  --age-10: #2d6cc0; /* azul  */
+  --age-12: #f2c12e; /* amarelo */
+  --age-14: #f28c28; /* laranja */
+  --age-16: #d4352c; /* vermelho */
+  --age-18: #111111; /* preto */
+}
+
+/*button*/
+.btn {
+  background-color: var(--bg-color-1);
+  color: var(--text-color-1);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+ color: var(--first-color);
+ transform: scale(1.05);
+}
+
