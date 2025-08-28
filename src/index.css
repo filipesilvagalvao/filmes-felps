@@ -9,14 +9,17 @@
 
 body{
   background-color: var(--bg-color-2);
+  height: 200vh;
 }
 
 :root {
   --first-color: #79c142;
   --bg-color-1: #333;
   --bg-color-2:#020916;
+  --bg-color-3: #090b0f;
   --text-color-1: #fdfdfd;
   --text-color-2: #ccc;
+  --text-color-3:#f2c12e;
 
   --age-livre: #1b873b; /* verde */
   --age-10: #2d6cc0; /* azul  */
