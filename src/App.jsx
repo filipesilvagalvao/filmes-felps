@@ -10,10 +10,10 @@ function App() {
   return (
     <>
       <Header />
-      {/* <Slider />
+      <Slider />
       <Categories />
-      <Home /> */}
-      <Movie />
+      <Home />
+      {/* <Movie /> */}
     </>
   )
 }

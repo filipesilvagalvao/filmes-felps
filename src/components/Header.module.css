@@ -129,6 +129,9 @@ span.header__buttonHamburguerSpan {
 }
 
 @media (max-width: 1120px) {
+  .header__container{
+    margin: 0;
+  }
   .header__logo {
     position: absolute;
     left: 50%;
