@@ -46,8 +46,8 @@
 
 .header__form {
   display: flex;
-  border: 1px solid var(--text-color-2);
-  background-color: #e9e3e3;
+  border: 1px solid var(--bg-color-1);
+  background: var(--bg-color-2);
   width: min(500px, 100%);
   height: 35px;
   border-radius: 35px;
@@ -60,6 +60,7 @@
   padding: 0 15px;
   font-weight: 400;
   font-size: 1rem;
+  color: var(--text-color-1);
 }
 
 .header__inputSearch:focus {
@@ -74,6 +75,7 @@
   cursor: pointer;
   font-size: 1.2rem;
   font-weight: bold;
+  color: var(--text-color-2);
 }
 
 .header__labelHamburguer {
@@ -146,6 +148,7 @@ span.header__buttonHamburguerSpan {
   .header__list {
     position: absolute;
     background-color: var(--bg-color-2);
+        box-shadow: 0 0 15px #000000;
     flex-direction: column;
     width: min(300px, 80%);
     height: auto;
