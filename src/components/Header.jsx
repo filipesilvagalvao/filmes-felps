@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import styles from "./Header.module.css";
 import logo from "/src/assets/logo.png"
 const {
@@ -20,11 +20,14 @@ const {
 } = styles;
 
 function Header() {
+    const [focus, setFocus] = useState(true)
+
     const searchInput = useRef(null);
 
     function openSearchModal() {
         searchInput.current.classList.toggle(styles.header__formOpen);
-        searchInput.current.children[0].focus();
+        setFocus(!focus)
+        focus && searchInput.current.children[0].focus();
     }
     return (
         <header className={header}>
@@ -67,6 +70,12 @@ function Header() {
                             <a href="#" className={header__itemLink}>
                                 <i className="fa-solid fa-layer-group"></i>
                                 Séries
+                            </a>
+                        </li>
+                        <li className={header__item}>
+                            <a href="#" className={header__itemLink}>
+                                <i className="fa-solid fa-torii-gate"></i>
+                                Animes
                             </a>
                         </li>
                         <li className={header__item}>
