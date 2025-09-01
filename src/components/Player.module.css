@@ -1,31 +1,48 @@
-.player{
-    width: min(1500px, 95%);
-    margin: 30px auto;
-    background-color: var(--bg-color-4);
-    border: 1px solid var(--first-color);
+.player {
+  width: min(1500px, 95%);
+  margin: 30px auto;
+  background-color: var(--bg-color-4);
+  border: 1px solid var(--first-color);
 }
 
-.player__btnContainer{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 15px;
-    overflow-x: auto;
-    width: min(950px,100%);
-    margin: auto;
-    scrollbar-width: none; /* esconde a barra */
-  -ms-overflow-style: none; /* IE e Edge antigo */
+.player__btnContainer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  overflow-x: auto;
+  width: min(950px, 100%);
+  margin: auto;
+  scrollbar-color: var(--second-color) var(--bg-color-2);
+  scrollbar-width: thin;
 }
-.player__btn{
-    background: none;
-    border: 1px solid var(--first-color);
-    border-radius: 0;
-    width: 150px;
-    white-space: nowrap;
-    font-size: 0.88rem;
-    color: var(--text-color-2);
+
+/* Barra de rolagem personalizada para .player__btnContainer */
+.player__btnContainer::-webkit-scrollbar {
+  height: 8px;
+  background: var(--bg-color-2);
+  border-radius: 4px;
 }
-.player__iframe{
-    aspect-ratio: 16/9;
-    object-fit: cover;
+
+.player__btnContainer::-webkit-scrollbar-thumb {
+  background: var(--first-color);
+  border-radius: 4px;
+}
+
+.player__btnContainer::-webkit-scrollbar-thumb:hover {
+  background: var(--second-color, #555);
+}
+
+.player__btn {
+  background: none;
+  border: 1px solid var(--first-color);
+  border-radius: 0;
+  width: 150px;
+  white-space: nowrap;
+  font-size: 0.88rem;
+  color: var(--text-color-2);
+}
+.player__iframe {
+  aspect-ratio: 16/9;
+  object-fit: cover;
 }
