@@ -59,13 +59,13 @@ function Header() {
                         </li>
                         <li className={header__item}>
                             <a href="#" className={header__itemLink}>
-                                <i className="fa-solid fa-clapperboard"></i>
+                                <i className="fa-solid fa-film"></i>
                                 Filmes
                             </a>
                         </li>
                         <li className={header__item}>
                             <a href="#" className={header__itemLink}>
-                                <i className="fa-solid fa-film"></i>
+                                <i className="fa-solid fa-layer-group"></i>
                                 Séries
                             </a>
                         </li>

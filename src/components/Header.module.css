@@ -142,7 +142,7 @@ span.header__buttonHamburguerSpan {
 
   .header__list {
     position: absolute;
-    background-color: var(--bg-color-1);
+    background-color: var(--bg-color-2);
     flex-direction: column;
     width: min(300px, 80%);
     height: auto;
@@ -155,6 +155,9 @@ span.header__buttonHamburguerSpan {
     transform-origin: 0 0;
   }
 
+  .header__item{
+    border-bottom: 1px solid var(--text-color-4);
+  }
   .header__nav {
     width: 100%;
   }
