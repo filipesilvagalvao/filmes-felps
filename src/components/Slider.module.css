@@ -154,7 +154,7 @@
 
 @media (max-width: 740px) {
   .slider__img {
-    aspect-ratio: 4/3;
+    aspect-ratio: 4/4;
   }
   .slider__description {
     bottom: 50px;
@@ -169,6 +169,9 @@
     flex-wrap: wrap;
   }
 
+}
+
+@media (max-width: 530px) {
   .slider__paragraph {
     display: none;
   }

@@ -2,7 +2,6 @@ import styles from "./Slider.module.css";
 import thumb1 from "/src/assets/Thunderbolts-2025.webp"
 const {
     slider,
-    slider__background,
     slider__card,
     slider__figure,
     slider__img,
