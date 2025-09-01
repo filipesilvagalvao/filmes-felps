@@ -17,9 +17,11 @@ body{
   --bg-color-1: #333;
   --bg-color-2:#020916;
   --bg-color-3: #090b0f;
+  --bg-color-4:#00000069;
   --text-color-1: #fdfdfd;
   --text-color-2: #ccc;
   --text-color-3:#f2c12e;
+  --text-color-4: #08396863;
 
   --age-livre: #1b873b; /* verde */
   --age-10: #2d6cc0; /* azul  */
@@ -30,7 +32,7 @@ body{
 }
 
 /*button*/
-.btn {
+.btn{
   background-color: var(--bg-color-1);
   color: var(--text-color-1);
   border: none;
@@ -47,3 +49,11 @@ body{
  transform: scale(1.05);
 }
 
+.paragraph{
+  color: var(--text-color-2);
+  opacity: 0.8;
+  font-size: 0.9rem;
+  font-weight: 200;
+  width: min(1500px, 95%);
+  margin:auto;
+}
