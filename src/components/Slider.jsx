@@ -1,5 +1,8 @@
 import styles from "./Slider.module.css";
 import thumb1 from "/src/assets/Thunderbolts-2025.webp"
+import { GlobalContext } from "../GlobalContext";
+import { useContext } from "react";
+
 const {
     slider,
     slider__card,
@@ -13,68 +16,34 @@ const {
 } = styles;
 
 function Slider() {
+    const global = useContext(GlobalContext)
+
+    if (global.topMovies === null) return null
+
+    const { topMovies,genreMovies } = global
+    console.log(topMovies.results)
     return (
         <section className={slider}>
-            
-            <article className={slider__card}>
-                <figure className={slider__figure}>
-                    <img src={thumb1} alt="capa do filme ou série" className={slider__img} />
-                    <figcaption className={slider__description}>
-                        <h3 className={slider__title}>Thunderbolts*</h3>
-                        <ul className={slider__list}>
-                            <li className={slider__item}>8.0</li>
-                            <li className={slider__item}>55 min</li>
-                            <li className={slider__item}>Ação</li>
-                            <li className={slider__item}>Aventura</li>
-                            <li className={slider__item}>Ficção</li>
-                            <li className={slider__item}>14</li>
-                        </ul>
+            {topMovies.results.map(({backdrop_path,genre_ids,overview,poster_path,title,vote_average},i) => (
+                i<9&&
+                <article className={slider__card}>
+                    <figure className={slider__figure}>
+                        <img src={'https://image.tmdb.org/t/p/w1280'+backdrop_path} alt={title} className={slider__img} />
+                        <figcaption className={slider__description}>
+                            <h3 className={slider__title}>{title}</h3>
+                            <ul className={slider__list}>
+                                <li className={slider__item}>{vote_average}</li>
+                                <li className={slider__item}>55 min</li>
+                                {genre_ids.map((genreId)=><li className={slider__item}>{genreMovies[genreId]}</li>)}
+                                <li className={slider__item}>14</li>
+                            </ul>
 
-                        <p className={slider__paragraph}>Depois de se verem presos em uma armadilha mortal, uma equipe não convencional de sete anti-heróis deve embarcar em uma missão perigosa que os forçará a confrontar os cantos mais sombrios de seus passados.</p>
-                        <button className="btn">Assistir Agora <i className="fa-regular fa-circle-play"></i></button>
-                    </figcaption>
-                </figure>
-            </article>
-            
-            <article className={slider__card}>
-                <figure className={slider__figure}>
-                    <img src={thumb1} alt="capa do filme ou série" className={slider__img} />
-                    <figcaption className={slider__description}>
-                        <h3 className={slider__title}>Thunderbolts*</h3>
-                        <ul className={slider__list}>
-                            <li className={slider__item}>8.0</li>
-                            <li className={slider__item}>55 min</li>
-                            <li className={slider__item}>Ação</li>
-                            <li className={slider__item}>Aventura</li>
-                            <li className={slider__item}>Ficção</li>
-                            <li className={slider__item}>14</li>
-                        </ul>
-
-                        <p className={slider__paragraph}>Depois de se verem presos em uma armadilha mortal, uma equipe não convencional de sete anti-heróis deve embarcar em uma missão perigosa que os forçará a confrontar os cantos mais sombrios de seus passados.</p>
-                        <button className="btn">Assistir Agora <i className="fa-regular fa-circle-play"></i></button>
-                    </figcaption>
-                </figure>
-            </article>
-
-            <article className={slider__card}>
-                <figure className={slider__figure}>
-                    <img src={thumb1} alt="capa do filme ou série" className={slider__img} />
-                    <figcaption className={slider__description}>
-                        <h3 className={slider__title}>Thunderbolts*</h3>
-                        <ul className={slider__list}>
-                            <li className={slider__item}>8.0</li>
-                            <li className={slider__item}>55 min</li>
-                            <li className={slider__item}>Ação</li>
-                            <li className={slider__item}>Aventura</li>
-                            <li className={slider__item}>Ficção</li>
-                            <li className={slider__item}>14</li>
-                        </ul>
-
-                        <p className={slider__paragraph}>Depois de se verem presos em uma armadilha mortal, uma equipe não convencional de sete anti-heróis deve embarcar em uma missão perigosa que os forçará a confrontar os cantos mais sombrios de seus passados.</p>
-                        <button className="btn">Assistir Agora <i className="fa-regular fa-circle-play"></i></button>
-                    </figcaption>
-                </figure>
-            </article>
+                            <p className={slider__paragraph}>{overview}</p>
+                            <button className="btn">Assistir Agora <i className="fa-regular fa-circle-play"></i></button>
+                        </figcaption>
+                    </figure>
+                </article>
+            ))}
         </section>
     )
 }
