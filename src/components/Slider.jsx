@@ -21,7 +21,7 @@ function Slider() {
     if (global.topMovies === null) return null
 
     const { topMovies,genreMovies } = global
-    console.log(topMovies.results)
+
     return (
         <section className={slider}>
             {topMovies.results.map(({backdrop_path,genre_ids,overview,poster_path,title,vote_average},i) => (
